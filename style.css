@@ -19,10 +19,16 @@ html {
 }
 
 button {
-  background: inherit;
+  background: none;
+  border: none;
   color: inherit;
   cursor: pointer;
   transition: all .3s ease;
+}
+
+input {
+  border: none;
+  background: none;
 }
 
 ::placeholder {
@@ -37,7 +43,7 @@ button {
 
 .page__title {
   font-size: 3rem;
-  font-weight: 100;
+  font-weight: lighter;
   margin-top: 1rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -45,7 +51,7 @@ button {
 
 .color--accent {
   color: var(--accent-color);
-  font-weight: 900;
+  font-weight: bold;
 }
 
 /*  */
@@ -86,8 +92,6 @@ button {
   margin-left: 1rem;
   padding: 1.1rem;
   background: var(--accent-color);
-  border: 1px solid var(--white-color);
-  border: none;
   border-radius: 50%;
   outline: none;
 }
@@ -108,7 +112,6 @@ button {
 .list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 2rem 0;
   list-style-type: none;
@@ -126,8 +129,6 @@ button {
 
 .list__input {
   flex-grow: 1;
-  background: none;
-  border: none;
   color: #b7babb;
   font-size: 1.4rem;
   text-overflow: ellipsis;
@@ -139,10 +140,8 @@ button {
 
 .list__button {
   margin-left: 1rem;
-  border: none;
-  background: none;
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: lighter;
 }
 
 .button--edit {
@@ -151,4 +150,11 @@ button {
 
 .button--remove {
   color: var(--danger-color);
+}
+
+@media screen and (max-width: 440px) {
+  .list__input,
+  .list__button {
+    font-size: 1rem;
+  }
 }
